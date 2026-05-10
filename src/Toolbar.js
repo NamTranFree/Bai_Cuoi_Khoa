@@ -42,7 +42,7 @@ const Toolbar = ({ user, onLogout, onPhotoUploaded }) => {
                 </button>
               </div>
             ) : (
-              <span className="toolbar-no-login">Vui lòng đăng nhập</span>
+              null
             )}
           </div>
         </div>
