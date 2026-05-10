@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
+const bcrypt = require("bcryptjs");
 
 const models = require("../modelData/models.js");
 
@@ -24,12 +25,15 @@ async function dbLoad() {
   const userModels = models.userListModel();
   const mapFakeId2RealId = {};
   for (const user of userModels) {
+    const hashedPassword = await bcrypt.hash("demo123", 10);
     userObj = new User({
-      first: user.first_name,
+      first_name: user.first_name,
       last_name: user.last_name,
       location: user.location,
       description: user.description,
       occupation: user.occupation,
+      login_name: user.login_name,
+      password: hashedPassword,
     });
     try {
       await userObj.save();

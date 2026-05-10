@@ -1,0 +1,79 @@
+.toolbar {
+  background-color: #2f323a;
+  color: white;
+  padding: 14px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.toolbar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.toolbar-user-area {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-user-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.toolbar-add-photo-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.toolbar-add-photo-btn:hover {
+  background-color: #218838;
+}
+
+.toolbar-greeting {
+  font-size: 14px;
+  color: #f3f3f3;
+}
+
+.toolbar-logout-btn {
+  background-color: #4f6de2;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.toolbar-logout-btn:hover {
+  background-color: #3f59c6;
+}
+
+.toolbar-no-login {
+  font-size: 14px;
+  color: #d1d1d1;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .toolbar-content {
+    justify-content: flex-end;
+  }
+
+  .toolbar-user-info {
+    gap: 10px;
+  }
+}

@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "build": "webpack --mode production",
+    "dev": "webpack --watch --mode development"
   },
   "repository": {
     "type": "git",
@@ -18,12 +20,26 @@
   },
   "homepage": "https://github.com/codesandbox-app/static-template#readme",
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.5",
+    "@babel/preset-react": "^7.28.5",
+    "babel-loader": "^10.1.1",
+    "css-loader": "^7.1.4",
+    "nodemon": "^3.0.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.106.2",
+    "webpack-cli": "^7.0.2"
   },
   "dependencies": {
+    "axios": "^1.16.0",
+    "bcryptjs": "^3.0.3",
     "cors": "2.8.5",
     "dotenv": "16.4.5",
     "express": "4.19.2",
-    "mongoose": "8.3.3"
+    "express-session": "^1.19.0",
+    "mongoose": "8.3.3",
+    "multer": "^2.1.1",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
   }
 }
